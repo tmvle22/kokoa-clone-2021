@@ -24,7 +24,7 @@
 .more-suggestions__icon-image {
   width: 60px;
   height: 60px;
-  background-color: var(--yellow);
+  background-color: var(--mint);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@
 
 .more-suggestions__icon-image i {
   font-size: 30px;
-  color: white;
+  color: var(--white);
 }
 
 .more-suggestions__icon-text {

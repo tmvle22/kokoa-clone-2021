@@ -9,13 +9,18 @@
 
 .welcome-header__title {
   margin-bottom: 23px;
-  font-size: 20px;
+  font-size: 23px;
+  font-weight: 700;
 }
 
+.welcome-header__title p {
+  color: var(--mint);
+}
 .welcome-header__text {
   font-size: 15px;
   width: 100%;
   opacity: 0.6;
+  font-weight: 400;
 }
 
 #login-form {
@@ -52,11 +57,11 @@
 }
 
 #login-form input:focus {
-  border-color: var(--yellow);
+  border-color: var(--mint);
 }
 
 #login-form input[type="submit"] {
-  background-color: var(--yellow);
+  background-color: var(--mint);
   border-radius: 5px;
 }
 
@@ -65,4 +70,5 @@
   text-decoration: none;
   color: inherit;
   font-size: 13px;
+  margin-top: 10px;
 }

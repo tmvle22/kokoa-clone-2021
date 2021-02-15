@@ -9,8 +9,8 @@ body {
   padding: var(--horizontal-space);
 }
 .screen-header__title {
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .screen-header__icons span {

@@ -1,5 +1,5 @@
 #chat-screen {
-  background-color: #abc1d1;
+  background-color: #d6e8f5;
   height: 500vh;
 }
 
@@ -9,12 +9,12 @@
   position: fixed;
   width: 100%;
   box-sizing: border-box;
-  background-color: #abc1d1;
+  background-color: #d6e8f5;
 }
 
 #chat-screen .status-bar {
   z-index: 2;
-  border-bottom: 5px solid #abc1d1;
+  border-bottom: 5px solid #d6e8f5;
 }
 
 #chat-screen .alt-header {
@@ -80,6 +80,11 @@
   animation-delay: 2s;
 }
 
+.message-row__own .message__info {
+  transform: translateX(15px);
+  opacity: 0;
+}
+
 .chat-timestamp {
   font-size: 12px;
   font-weight: 600;
@@ -117,11 +122,12 @@
 }
 
 .message__bubble {
-  background-color: white;
+  background-color: var(--white);
   padding: 11px 14px;
   border-radius: 15px;
   border-top-left-radius: 0px;
   margin-right: 5px;
+  line-height: 1.5rem;
 }
 
 .message__time {
@@ -134,7 +140,7 @@
 }
 
 .message-row__own .message__bubble {
-  background-color: var(--yellow);
+  background-color: var(--mint);
   border-top-right-radius: 0px;
   border-top-left-radius: 15px;
   margin-right: 0px;
@@ -148,11 +154,12 @@
 .reply {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  height: fit-content;
   background-color: white;
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px;
+  padding: 0.5% 1%;
   box-sizing: border-box;
   align-items: center;
   transition: all 0.2s ease-in-out;
@@ -160,18 +167,23 @@
 
 .reply .reply__column:first-child {
   width: 10%;
+  display: flex;
+  justify-content: center;
 }
 .reply .reply__column:last-child {
+  display: flex;
+
   width: 90%;
   position: relative;
 }
 
 .reply input {
-  width: 98%;
+  width: 100%;
   height: 35px;
   border: var(--main-border);
   border-radius: 20px;
   padding-left: 10px;
+
   transition: all 0.2s ease-in-out;
 }
 
@@ -179,7 +191,7 @@
 .reply__column:last-child button {
   position: absolute;
   top: 3.5px;
-  right: -3px;
+  right: 3px;
 }
 
 .reply__column:last-child > i {
@@ -188,7 +200,8 @@
 }
 
 .reply__column button {
-  background-color: var(--yellow);
+  background-color: var(--mint);
+  color: var(--white);
   border: none;
   width: 32px;
   height: 32px;
@@ -212,12 +225,17 @@
 .reply:focus-within button {
   opacity: 0;
 }
-
-.reply input:focus {
-  width: 94.5vw;
-  transform: translateX(-11%) translateY(-50px);
+.reply .reply__column:last-child:focus-within {
+  width: 100vw;
+  margin-left: -10vw;
 }
 
+.reply input:focus {
+  position: absolute;
+  width: 96%;
+  transform: translateY(-130%);
+  border-color: var(--mint);
+}
 .reply input::placeholder {
   transition: all 0.2s ease-in-out;
 }
@@ -232,5 +250,5 @@
 }
 
 .reply:focus-within {
-  transform: translateY(50px);
+  transform: translateY(100%);
 }
